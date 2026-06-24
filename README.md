@@ -1,46 +1,46 @@
-# 📊 End-to-End Crime Data Analytics Pipeline
+# End-to-End Crime Data Analytics Pipeline
 
-## 🎯 Project Overview
-This portfolio project demonstrates a complete data analytics pipeline across **SQL** and **Power BI**. Taking a raw dataset of over 40,000 records, I built a robust SQL cleaning pipeline to verify data integrity, smoothly ingested that verified data into Power BI, and engineered an executive reporting solution for public safety tracking.
-
----
-
-## 🗂️ Data Architecture & Datasets
-To demonstrate the complete lifecycle of the data, the `/Data` folder contains both versions of the dataset:
-* **`crime_dataset_india.csv` (Raw/Dirty Data):** The original source dataset containing over 40,000 records of raw tracking information, unformatted schemas, and structural anomalies.
-* **`Crime _dataset_india_clean.csv` (Final Clean Data):** The optimized, validated, and polished dataset output generated after the SQL transformation process, ready for direct BI ingestion.
+## Project Overview
+This project demonstrates a complete data analytics pipeline using SQL and Power BI. The pipeline processes a raw dataset of over 40,000 records, executing data cleaning and validation in SQL before ingesting the refined data into Power BI for executive reporting and public safety tracking.
 
 ---
 
-## 🛠️ Phase 1: Data Engineering & Cleaning (SQL)
-All heavy data preparation and structural validation were handled entirely using SQL to transition the data from its raw state into a reliable "single source of truth."
-
-### 🔍 What Was Cleaned & Validated in SQL:
-* **Staging Environment Isolation:** Created a dedicated staging table (`crime_dataset_staging`) to protect raw source data integrity and prevent altering historical records.
-* **Structural Duplicate Validation:** Engineered verification queries using structural scanning to check for anomalies and confirm duplicate thresholds across the 40,000+ rows, ensuring an accurate baseline count.
-* **Data Type Realignment & Schema Readiness:** Checked, altered, and standardized data types across columns to ensure numeric fields, tracking strings, and categorical labels align seamlessly for reporting tools.
-
-📂 *All transformation scripts can be found in the `/SQL` folder.*
+## Data Architecture
+The `/Data` directory contains the data lifecycle stages:
+* `crime_dataset_india.csv`: The original source file containing over 40,000 records of raw tracking information and structural anomalies.
+* `Crime _dataset_india_clean.csv`: The optimized, validated dataset output from the SQL transformation pipeline, used for the BI model.
 
 ---
 
-## 🔄 The Bridge: Data Loading & Integration
-Once the SQL pipeline verified that the dataset was clean, structured, and accurate:
-1. The finalized staging data was exported as a clean tabular schema (`Crime _dataset_india_clean.csv`).
-2. This clean table was directly imported into **Power BI Desktop** via the data connector, ensuring zero data loss and maintaining absolute data type integrity from the database layer straight to the reporting canvas.
+## Phase 1: Data Engineering & Cleaning (SQL)
+All data preparation and structural validation were handled within SQL to establish a reliable source of truth before visualization.
+
+Key SQL Operations:
+* Staging Environment Isolation: Configured a dedicated staging table (`crime_dataset_staging`) to maintain raw source data integrity.
+* Duplicate Validation: Engineered verification queries to check structural anomalies and confirm duplicate thresholds across the dataset.
+* Schema Standardization: Adjusted and standardized column data types to ensure seamless integration with data visualization tools.
+
+All transformation scripts are available in the `/SQL` folder.
 
 ---
 
-## 🎨 Phase 2: Analytics & Executive Reporting (Power BI)
-With the verified dataset loaded, the data was transformed into an interactive, production-ready **Executive Analytics Dashboard** designed to deliver actionable operational intelligence for stakeholders.
+## Data Ingestion & Integration
+Following the SQL pipeline validation:
+1. The staging data was exported into a structured tabular schema (`Crime _dataset_india_clean.csv`).
+2. The clean file was imported into Power BI Desktop, preserving data types and constraints established in the database layer.
 
-### 📊 Dashboard Features & Visualizations:
-* **Key Performance Indicators (KPIs):** High-level summary cards showing metrics like **Total Reported Crimes** to give stakeholders an instant operational snapshot.
-* **Geospatial Analysis:** Interactive map visuals identifying regional crime distribution and high-density hot spots to support targeted resource allocation.
-* **Temporal Trend Analysis:** Line charts displaying crime trends over time (monthly/yearly) to uncover seasonal patterns and long-term systemic shifts.
-* **Categorical Breakdown:** Clustered bar charts breaking down the frequencies of specific crime categories to pinpoint the most prevalent offenses.
+---
 
-### 🎛️ Interactive Insights & Slicers:
-* Dynamic filters allowing stakeholders to slice the entire report by variables such as **Year**, **Region/State**, and **Crime Type** for deep-dive granular analysis.
+## Phase 2: Analytics & Executive Reporting (Power BI)
+The validated dataset was modeled into an interactive Power BI dashboard designed for public safety operational intelligence.
 
-📂 *The tracking dashboard file can be found in the `/Power Bi` folder.*
+Dashboard Features:
+* Key Performance Indicators: High-level metrics tracking total reported incidents for rapid situational assessment.
+* Geospatial Analysis: Map visualizations showing regional crime distribution to assist resource allocation.
+* Temporal Trends: Line charts tracking incident frequencies across monthly and annual timelines.
+* Categorical Breakdown: Clustered bar charts identifying the prevalence of specific crime types.
+
+Interactive Slicers:
+* Dynamic filters enabling users to slice data by Year, Region/State, and Crime Type for granular analysis.
+
+The tracking dashboard file is located in the `/Power Bi` folder.
