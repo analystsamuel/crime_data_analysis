@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
+# Handle line endings automatically for text files
 * text=auto
+
+# Ensure SQL scripts are treated as standard text files
+*.sql text
+
+# Explicitly mark Power BI desktop files as binary
+*.pbix binary
+
+# Explicitly treat large raw data CSVs as binary
+*.csv binary
