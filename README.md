@@ -27,20 +27,22 @@ All transformation scripts are available in the `/SQL` folder.
 ## Data Ingestion & Integration
 Following the SQL pipeline validation:
 1. The staging data was exported into a structured tabular schema (`Crime _dataset_india_clean.csv`).
-2. The clean file was imported into Power BI Desktop, preserving data types and constraints established in the database layer.
+2. The clean file was imported into `Crime dashboard.pbix`, preserving data types and constraints established in the database layer.
 
 ---
 
 ## Phase 2: Analytics & Executive Reporting (Power BI)
-The validated dataset was modeled into an interactive Power BI dashboard designed for public safety operational intelligence.
+The validated dataset was modeled into an interactive Power BI dashboard (`Crime dashboard.pbix`) designed for public safety operational intelligence.
 
 Dashboard Features:
-* Key Performance Indicators: High-level metrics tracking total reported incidents for rapid situational assessment.
-* Geospatial Analysis: Map visualizations showing regional crime distribution to assist resource allocation.
-* Temporal Trends: Line charts tracking incident frequencies across monthly and annual timelines.
-* Categorical Breakdown: Clustered bar charts identifying the prevalence of specific crime types.
+* **Key Performance Indicators**: 
+    * Total Crimes: **40.16K**
+    * Total Crime Types: **21**
+    * Average Duration: **88.06 days**
+* **Age Group Victims**: Visualizes incident distribution across Middle Age, Old, Youth, and Children demographics.
+* **Most Affected Cities**: Ranked bar chart identifying top regions like Pune and Surat for incident frequency.
+* **Most Used Weapons**: A detailed breakdown of incident involvement by weapon type (Knife, Explosives, Firearm, etc.).
+* **Case Condition**: A donut chart providing a real-time status split between "Ongoing" (~49.96%) and "Complete" (~50.04%) cases.
 
 Interactive Slicers:
-* Dynamic filters enabling users to slice data by Year, Region/State, and Crime Type for granular analysis.
-
-The tracking dashboard file is located in the `/Power Bi` folder.
+* Dynamic filters enabling users to slice data by **Crime Domain** and **City** for granular, localized analysis.
